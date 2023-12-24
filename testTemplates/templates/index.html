@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam assumenda at consequuntur cumque delectus eos exercitationem fuga hic, id illo incidunt, ipsa iste necessitatibus nisi obcaecati officia sed temporibus?</p>
+
+{% for el in products %}
+<div class='card'>
+	<h3>{{el.name}}</h3>
+	<h4>{{el.price}}</h4>
+	<p>{{el.description}}</p>
+</div>
+{% endfor %}
+{% endblock %}
