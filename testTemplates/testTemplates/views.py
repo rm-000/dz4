@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-menu = {'главная':'/', 'о блоге':'/about'}
+menu = {'главная':'/', 'о блоге':'/about', 'комментарии':'/comments'}
 
 def about_page(request):
     title = 'О блоге'

@@ -10,8 +10,10 @@ class Product(models.Model):
 
 class ProductComment(models.Model):
     user_name = models.CharField(max_length=40, blank=False)
-    comment = models.CharField(max_length=600, blank=False)
+    email = models.EmailField(max_length=60, blank=False)
+    feedback = models.CharField(null=True, max_length=300, blank=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    checkbox = models.BooleanField(default=False)
 
     def __str__(self):
-        return f'{self.user_name} - {self.comment}'
+        return f'Отзыв от {self.user_name}: {self.product}'
