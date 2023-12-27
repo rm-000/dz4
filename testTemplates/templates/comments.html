@@ -3,7 +3,7 @@
 {% block content %}
 <h2>{{ title }}</h2>
 
-{% for el in ProductComment %}
+{% for el in comment %}
   <div class="card">
     {% if el.checkbox == True %}
     <h3>{{el.user_name}}</h3>
